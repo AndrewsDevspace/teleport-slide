@@ -1,0 +1,142 @@
+@keyframes glower-1 {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    text-shadow:
+      0px 0px 0.5rem #00F,
+      0px 0px 0.67rem #00F,
+      0px 0px 1rem #00F,
+      0px 0px 1.5rem #00F,
+      0px 0px 2rem #00F;
+  }
+  81% {
+    text-shadow:
+      0px 0px 1rem #67F,
+      0px 0px 1.33rem #67F,
+      0px 0px 2rem #67F,
+      0px 0px 3rem #67F,
+      0px 0px 4rem #67F;
+  }
+}
+
+@keyframes glower-2 {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    color: #CEF;
+  }
+  81% {
+    color: #FFD;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: black;
+  color: #CEF;
+}
+
+h1 {
+  font-size: 3rem;
+  animation: glower-1 2s infinite;
+}
+
+h2 {
+  font-size: 2rem;
+  animation: glower-1 2s infinite;
+}
+
+h3 {
+  font-size: 1.5rem;
+  animation:
+    glower-1 1.3s infinite,
+    glower-2 1.3s infinite;
+}
+
+#join {
+  font-size: 1.2rem;
+  animation:
+    glower-1 1s infinite,
+    glower-2 1s infinite;
+  align-self: flex-start;
+}
+
+.divider {
+  display: inline-block;
+  width: 100%;
+  height: 110vh;
+  background-color: #444;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#di-1 {
+  background-image: url("./assets/teleport_magic.webp");
+}
+
+#di-2 {
+  background-image: url("./assets/out_there.webp");
+}
+
+#di-3 {
+  background-image: url("./assets/the_world.jpg");
+}
+
+#di-4 {
+  background-image: url("./assets/adventure.jpg");
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  text-align: left;
+  margin: 0 0.5rem;
+}
+
+footer > *:not(#join) {
+  font-size: 0.75rem;
+  color: #bde;
+}
+
+@media (width < 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    column-gap: 1rem;
+  }
+
+  #join {
+    flex-basis: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    order: -1;
+  }
+
+  footer > *:not(#join) {
+    flex-shrink: 1;
+  }
+}
+
+@media (width < 320px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  footer > *:not(#join) {
+    flex-basis: calc(50% - 0.5rem);
+  }
+}
