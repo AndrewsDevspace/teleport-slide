@@ -63,14 +63,25 @@ h3 {
 .divider {
   display: inline-block;
   width: 100%;
-  height: 110vh;
-  height: 110svh;
+  /* Behaves weird on mobile still... so using orientation. */
+  /*height: 110vh;
+  height: 110svh;*/
   background-color: #444;
 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+@media (orientation: landscape) {
+  .divider {
+    height: 66vw;
+  }
+}
+@media (orientation: portrait) {
+  .divider {
+    height: 200vw;
+  }
 }
 
 #di-1 {
