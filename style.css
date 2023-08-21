@@ -80,7 +80,7 @@ h3 {
 }
 @media (orientation: portrait) {
   .divider {
-    height: 200vw;
+    height: 500px;
   }
 }
 
