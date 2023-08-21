@@ -107,7 +107,7 @@ footer > *:not(#join) {
 /* * * * * * * * * * * * * * * * * * * * * *
 * Turn Off Animation on Tablets and Mobiles *
 * * * * * * * * * * * * * * * * * * * * * * */
-@media (width < 768px) {
+@media (width < 1024px) {
   h1,
   h2,
   h3,
